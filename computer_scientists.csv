@@ -1,0 +1,626 @@
+Surname,Awards,Education
+Khan,10,University of Malaya
+Aalst,0,RWTH Aachen University
+Aaronson,7,Cornell University
+Abebe,9,Cornell University
+Abelson,5,Princeton University
+Abiteboul,6,University of Southern California
+Abramsky,6,Queen Mary University of London
+Adleman,4,"University of California, Berkeley"
+Agrawal,10,Indian Institute of Technology Kanpur
+Ahn,10,Duke University
+Aho,0,University of Toronto
+Allen,13,University at Albany
+Amdahl,7,South Dakota State University
+Anderson,0,Wesleyan University
+Anthony,6,University of Florida
+Appel,0,Princeton University
+Aragon,1,"University of California, Berkeley"
+Arden,0,Purdue University
+Jones,0,Tennessee State University
+Arora,0,Princeton University
+Asprey,0,University of Iowa
+Atanasoff,0,University of Florida
+Atre,0,University of Poona
+Babbage,0,University of Edinburgh
+Bachman,5,University of Pennsylvania
+Backhouse,0,Heriot-Watt University
+Backus,9,University of Virginia
+Bacon,0,"Columbia College, Columbia University"
+Bahl,17,"University of Massachusetts, Amherst"
+Barr,0,North Carolina State University
+Bartik,4,University of Pennsylvania
+Barto,3,University of Michigan
+Bauer,14,Ludwig-Maximilians-Universität
+Bayer,0,University of Illinois at Urbana–Champaign
+Bell,0,New South Wales University of Technology
+Bellovin,0,Columbia University
+Berdichevsky,0,University of Buenos Aires
+Bernstein,0,"University of California, Berkeley"
+Bernus,0,Griffith University
+Bezos,0,Princeton University
+Bhushan,0,Indian Institute of Technology Kanpur
+Blaauw,0,Delft University of Technology
+Blei,2,Brown University
+Blum,0,Null
+Blum,0,Carnegie Mellon University
+Blum,0,"University of California, Berkeley"
+Boehm,8,University of Southern California
+Bollacker,0,University of Texas at Austin
+Bonwick,0,Null
+Booch,9,"University of California, Santa Barbara"
+Boole,3,University College Cork
+Booth,0,University of London
+Booth,0,"Birkbeck College, University of London"
+Borg,5,New York University
+Bos,0,University of Groningen
+Botvinnik,0,Oxford University Press
+Bowen,0,University College
+Bourne,0,University of Cambridge Computer Laboratory
+Bouwman,0,VU University Amsterdam
+Boyer,0,The University of Texas at Austin
+Brandenburg,28,University of Erlangen-Nuremberg
+Brassard,11,Université de Montréal
+Breed,0,Stanford University
+Bresenham,0,Winthrop University
+Brin,0,"University of Maryland, College Park"
+Hansen,6,Technical University of Denmark
+Brinkkemper,0,Utrecht University
+Brooks,26,Duke University
+Brooks,0,Stanford University
+Burnett,0,Oregon State University
+Gil,3,University of La Laguna
+Camp,2,Michigan State University
+Candlin,0,University of Cambridge
+Canion,0,University of Houston
+Cantrill,0,Brown University
+Cardelli,3,University of Pisa
+Carmack,0,University of Missouri–Kansas City
+Caspersen,0,Aarhus University
+Catmull,12,University of Utah
+Cerf,38,Stanford University
+Chaitin,0,Mohammed VI Polytechnic University
+Cailliau,13,Ghent University
+Chaochen,0,Peking University
+Chen,18,National Taiwan University
+Chiariglione,6,Polytechnic University of Turin
+Chou,0,Stanford University
+Church,0,Princeton University
+Ciaramella,0,Sapienza University of Rome alumni
+Clarke,0,Cornell University
+Codd,0,University of Michigan
+Coldwater,0,Null
+Colton,0,Durham University
+Colmerauer,0,Aix-Marseille University
+Comer,8,Purdue University
+Compton,0,University of New South Wales
+Conway,3,Cornell University
+Cormack,0,University of Waterloo
+Cook,10,Harvard University
+Cooley,0,Columbia University
+Cooper,0,"University of California, Los Angeles"
+Cosper,0,Null
+Cousot,0,Saarland University
+Cox,0,University College London
+Cray,0,University of Minnesota
+Cristianini,5,University of Trieste
+Crowcroft,8,University of Cambridge
+Croft,8,University of Massachusetts Amherst
+Culler,1,"University of California, Berkeley"
+Curry,0,Harvard University
+Dadda,0,Università della Svizzera Italiana
+Dahl,0,University of Oslo
+Dahl,0,University of Rochester
+Dam,0,Andries van Dam at Brown University
+Das,0,Jadavpur University
+Daswani,0,Stanford University
+Date,0,University of Cambridge
+Davis,0,Arizona State University
+Dean,6,University of Minnesota
+Demaine,5,Dalhousie University
+DeMarco,0,Cornell University
+DeMillo,0,University of St. Thomas
+Denning,9,University of Michigan
+Denning,0,Princeton University
+Dertouzos,0,University of Arkansas
+Dewdney,0,University of Western Ontario
+Dewar,0,University of Chicago
+Dham,0,Delhi Technological University
+Dietz,0,Delft University of Technology
+Diffie,11,Stanford University
+Dijkstra,10,Leiden University
+Dillon,0,"University of California, Berkeley"
+Dix,0,Swansea University
+Dongarra,9,Chicago State University
+Dorigo,0,Université Libre de Bruxelles
+Dourish,5,"University of California, Irvine"
+Draper,7,Stanford University
+Dumais,6,Indiana University
+Dunkels,0,Luleå University of Technology alumni
+Dunn,0,University of Pittsburgh
+Dustdar,0,Fellow of the Institute of Electrical and Electronics Engineers
+Eades,0,University of Sydney
+Easley,0,Cleveland State University
+Ebbinkhuijsen,0,Vrije Universiteit
+Eckert,0,University of Pennsylvania
+Edelman,5,Yale University
+Eich,0,University of Illinois Urbana-Champaign
+Emeagwali,0,George Washington University School of Engineering and Applied Science
+Emerson,2,University of Texas at Austin
+Engelbart,20,Oregon State University
+Engelhardt,3,Stanford University
+Eppstein,0,Stanford University
+Ershov,0,Moscow State University
+Estridge,0,University of Florida
+Etzioni,6,Harvard University
+Evans,0,University College London
+Evans,0,"University of California, Berkeley"
+Even,0,Harvard University
+Fahlman,0,Carnegie Mellon University
+Feigenbaum,9,Carnegie Mellon University
+Felten,2,Princeton University
+Finin,7,University of Illinois
+Finkel,0,University of Kentucky
+Firesmith,0,Arizona State University
+Flake,0,Clemson University
+Flowers,0,University of London
+Floyd,0,University of Chicago
+Floyd,2,"University of California, Berkeley"
+Fogel,0,New York University
+Foley,6,University of Michigan
+Forbus,0,Northwestern University
+Fortnow,4,Cornell University
+Fayed,0,Menoufia University
+France,0,University of the West Indies
+Franke,9,Munich University
+Fredkin,2,Carnegie Mellon University
+Freund,0,The Hebrew University of Jerusalem
+Friedman,0,University of Houston
+Fischer,0,University of British Columbia
+Fu,7,"University of California, San Diego"
+Fu,6,Universität Göttingen
+Fukushima,1,Kyoto University
+Fulkerson,0,Southern Illinois University
+Gabriel,0,Northeastern University
+Galil,7,Tel Aviv University
+Galler,0,University of Chicago
+Garey,0,University of Wisconsin–Madison
+Garis,0,Université Libre de Bruxelles
+Gates,0,Harvard University
+Gelernter,0,Yale University
+Gelobter,4,Brown University
+Geschke,7,Xavier University
+Ghahramani,2,University of Pennsylvania
+Ghemawat,3,Cornell University
+Gibbons,0,University of Edinburgh
+Gilbert,19,Miami University
+Giles,2,University of Tennessee
+Ginsburg,0,University of Michigan
+Glass,0,University of Washington
+Goel,0,Ohio State University
+Goguen,0,Harvard University
+Gold,0,Princeton University
+Goldberg,9,"University of California, Berkeley"
+Goldberg,0,"University of California, Berkeley"
+Goldreich,1,Ariel University
+Goldwasser,22,Carnegie Mellon University
+Golub,0,University of Illinois at Urbana-Champaign
+Golumbic,0,University of Haifa
+Gonnet,2,University of Waterloo
+Goodfellow,0,Stanford University
+Gosling,6,University of Calgary
+Graham,7,"University of California, Berkeley"
+Greibach,0,Harvard University
+Gries,18,University of Illinois at Urbana-Champaign
+Griesemer,0,Null
+Griswold,0,Stanford University
+Gropp,0,Stanford University
+Gruber,0,Loyola University New Orleans
+Guberman,0,Moscow State University
+Guha,2,"University of California, Berkeley"
+Gunther,9,La Trobe University
+Gutknecht,0,Johannes Kepler University Linz
+Guy,0,University of Cambridge
+Habermann,0,Free University of Amsterdam
+Hahn,0,Null
+Hall,1,University of Washington
+Hall,12,University of Southampton
+Halpern,0,Cornell University
+Hamming,7,University of Chicago
+Han,0,University of Wisconsin - Madison
+Harary,0,"University of California, Berkeley"
+Hartmanis,13,University of Marburg
+Hatton,0,Kingston University
+Hawryszkiewycz,0,"University of Technology, Sydney"
+Jifeng,0,Fudan University
+Hehner,0,Carleton University
+Hellman,10,New York University
+Heiser,14,University of Freiburg
+Hendler,0,Yale University
+Hennessy,13,Stanford University
+Herbert,0,Leeds University
+Hewitt,0,Keio University
+Hightower,0,Clayton State University
+Hillis,4,Harvard University
+Hinton,16,University of Cambridge
+Hirschberg,12,University of Pennsylvania
+Ho,5,Chinese University of Hong Kong
+Hoare,21,University of Oxford
+Hodes,0,"University of California, Berkeley"
+Holberton,3,University of Pennsylvania
+Holland,0,University of Michigan
+Hollerith,0,Columbia University
+Holzmann,0,Delft University of Technology
+Hopcroft,7,ITMO University
+Hopper,27,Yale University
+Horvitz,0,Stanford University
+Householder,0,University of Chicago
+Hudak,0,Vanderbilt University
+Huffman,5,Ohio State University
+Hui,0,University of Alberta
+Humphrey,0,University of Chicago
+Hutchins,0,Purdue University
+Hoberman,0,Columbia University
+Ichbiah,1,Null
+Ierusalimschy,0,Pontifical Catholic University of Rio de Janeiro
+Ingalls,5,Harvard University
+Irwin,14,University of Illinois at Urbana-Champaign
+Iverson,6,Queen's University
+Jacobson,0,Chalmers University of Technology alumni
+Jain,0,University of Hamburg
+James,0,Null
+Johnson,0,Columbia University
+Johnson,0,Columbia University
+Jordan,15,"University of California, San Diego"
+Joseph,0,University of Bombay
+Joshi,12,University of Pennsylvania
+Joy,0,University of Michigan
+Jurafsky,4,University of California at Berkeley
+Kahan,0,University of Toronto
+Kahn,2,Princeton University
+Kak,0,University of Madras
+Kamp,0,Null
+Karger,3,Harvard University
+Karp,1,Harvard University
+Karmarkar,11,"University of California, Berkeley"
+Karpinski,0,University of Bonn
+Kaehler,0,Stanford University
+Kay,8,University of Colorado at Boulder
+Kayal,5,Rutgers University
+Kellis,0,Massachusetts Institute of Technology
+Kemeny,0,Princeton University
+Kernighan,0,University of Toronto
+Kesselman,0,University of Southern California
+Kiczales,0,University of British Columbia
+Kirstein,5,University of Cambridge
+Kleene,0,Princeton University
+Klein,0,Cornell University
+Kleinrock,16,University of California at Los Angeles
+Knuth,27,Stanford University
+Koller,20,Hebrew University of Jerusalem
+Kolmogorov,11,Moscow State University
+Kolodner,0,Brandeis University
+Koster,0,University of Amsterdam
+Kowalski,9,University of Chicago
+Koza,0,Stanford University
+Krogstie,0,Norwegian University of Science and Technology
+Kruskal,0,University of Chicago
+Kruusmaa,4,Tallinn University of Technology
+Kurtz,0,Princeton University
+Ladner,0,"University of California, Berkeley"
+Lam,9,University of British Columbia
+Lamport,13,Brandeis University
+Lampson,15,Harvard University
+Landin,0,Cambridge University
+Langefors,0,Stockholm University
+Lattner,0,University of Portland
+Lazowska,0,Brown University
+Lederberg,3,Rockefeller University
+Lehman,3,Middlesex University
+Leiserson,0,Carnegie Mellon University
+Lenat,0,University of Pennsylvania
+LeCun,15,Pierre and Marie Curie University
+Lerdorf,1,University of Waterloo
+Levchin,0,University of Illinois at Urbana-Champaign
+Levin,0,Moscow University
+Licklider,0,Washington University in St. Louis
+Liddle,0,Stanford University
+Liedtke,0,Bielefeld University
+Lions,1,University of Sydney
+Lindsey,0,Manchester University
+Lipton,4,Case Western Reserve University
+Liskov,9,"University of California, Berkeley"
+Liu,0,Cornell University
+Long,2,San Diego State University
+Lopez,7,New Mexico State University
+Lovegrove,0,Cambridge University
+Lovelace,0,University of Turin
+Luckham,0,"University of California, Los Angeles"
+Luks,2,University of Oregon
+Lynch,0,Tufts University
+Thalmann,5,University of Geneva
+Maibaum,0,University of Toronto
+Marlow,2,University of Glasgow
+Manna,2,Carnegie Mellon University
+Martin,0,Null
+Mashey,0,Pennsylvania State University
+Matiyasevich,7,Leningrad State University
+Matsumoto,0,University of Tsukuba
+Mauchly,1,Johns Hopkins University
+Maulik,11,Calcutta University
+McAuley,0,University of Cambridge
+McBride,0,University of Edinburgh
+McCallum,0,University of Rochester
+McIlroy,3,Cornell University
+McKinstry,0,Null
+McKusick,0,"University of California, Berkeley"
+Meertens,2,Utrecht University
+Mehlhorn,15,Cornell University
+Metcalf,0,University of London
+Meyer,10,Université de Nancy
+Micali,6,La Sapienza University of Rome
+Milner,5,"City University, London"
+Minker,9,University of Wisconsin
+Minsky,5,Harvard University
+Mitchell,0,University of Waterloo
+Mitchell,7,Stanford University
+Mockapetris,10,University of California at Irvine
+Moler,0,Stanford University
+Moller,0,University of British Columbia
+Moon,0,Pennsylvania State University
+Moore,0,Stanford University
+Moore,0,Brown University
+Moore,14,"University of California, Berkeley"
+Moore,0,University of Edinburgh
+Moravec,0,Acadia University
+Morris,0,Harvard University
+Moses,0,Columbia University
+Motwani,7,Stanford University
+Mukhanov,0,National Research Nuclear University
+Muggleton,0,University of Edinburgh
+Mycroft,0,University of Cambridge
+Myers,0,University of Toronto
+Nadin,0,University of Texas at Dallas
+Nagao,10,Kyoto University
+Nake,2,University of Stuttgart
+Nardi,0,"University of California, Irvine"
+Naur,0,Technical University of Denmark
+Needham,3,University of Cambridge
+Nell,0,Drexel University
+Neumann,0,Birmingham University
+Neumann,0,Princeton University
+Neumann,5,Pázmány Péter University
+Newell,21,Stanford University
+Newman,0,University of Cambridge
+Ng,15,"University of California, Berkeley"
+Nilsson,1,Stanford University
+Nijssen,0,University of Queensland
+Nipkow,0,Cambridge University
+Nivat,4,Joseph Fourier University
+Nkambule,7,University of Pretoria
+Noe,0,Stanford University
+Nordin,0,University of Dortmund
+Norman,5,University of Pennsylvania
+Norvig,2,Brown University
+Novacky,0,University of Pittsburgh
+Nygaard,0,University of Oslo
+Odersky,0,Ludwig Maximilian University of Munich
+Olle,0,University of Manchester
+Omohundro,0,Stanford University
+Ornstein,0,Washington University in St. Louis
+Ousterhout,0,Stanford University
+Overmars,0,Utrecht University
+Owicki,0,Cornell University
+Page,0,University of Michigan
+Pal,25,University of Calcutta
+Pandya,0,Oxford University Computing Laboratory
+Papadimitriou,10,Princeton University
+Parnas,0,Carnegie Mellon University
+Patil,0,"University of California, San Diego"
+Patt,6,The University of Texas at Austin
+Paterson,0,University of Cambridge
+Paulson,2,Stanford University
+Pausch,0,Brown University
+Pearl,49,Rutgers University
+Perlis,0,Carnegie Mellon University
+Perlman,11,University of Washington
+Perotto,0,Academic staff of the Polytechnic University of Turin
+Jones,8,University of Cambridge
+Pham,0,Harvard University
+Pieraccini,2,University of Pisa
+Pingali,10,University of Texas at Austin
+Plotkin,2,University of Glasgow
+Pnueli,6,Tel Aviv University
+Poel,0,Delft University of Technology
+Popplewell,0,University of Cambridge
+Post,0,Columbia University
+Postel,0,"University of California, Los Angeles"
+Preparata,0,University of Rome
+Press,0,Harvard University
+Rabana,0,University of Cape Town
+Rozenberg,1,Leiden University
+Rabin,5,Hebrew University of Jerusalem
+Radev,6,Yale University
+Raman,0,University of Pune
+Randell,0,Newcastle University
+Ravn,0,University of Copenhagen
+Reddy,6,University of Madras
+Reed,0,Massachusetts Institute of Technology
+Reenskaug,0,University of Oslo
+Reynolds,0,Purdue University
+Reynolds,0,University of Southern California
+Riet,0,University of Amsterdam
+Richards,0,University of Manchester
+Riese,0,University of St Andrews
+Rijsbergen,5,University of Western Australia
+Ritchie,7,Harvard University
+Rivest,5,Stanford University
+Rolland,0,University of Nancy
+Romero,0,Null
+Rosenfeld,0,"University of Maryland, College Park"
+Ross,0,University of Edinburgh
+Rossum,5,University of Amsterdam
+Rothman,0,Null
+Royce,0,California Institute of Technology
+Rucker,0,Rutgers University
+Rudich,0,Carnegie Mellon University faculty
+Rulifson,3,University of Washington
+Rumbaugh,0,Massachusetts Institute of Technology
+Sadowsky,0,Harvard University
+Sadrzadeh,0,Université du Québec à Montréal
+Saif,0,Lahore University of Management Sciences
+Salton,3,Harvard University
+Sammet,7,University of Illinois at Urbana Champaign
+Sammut,0,University of New South Wales
+Sassenrath,0,"University of California, Davis"
+Satyanarayanan,0,Carnegie Mellon University (Ph.D.)
+Savitch,0,"University of California, Berkeley"
+Schaeffer,0,University of Waterloo
+Schickard,0,University of Tübingen
+Schmidhuber,0,Technical University of Munich
+Schneier,0,American University
+Schneider,14,Stony Brook University
+Schoenebeck,6,"University of California, Berkeley"
+Schroeder,0,Massachusetts Institute of Technology people
+Scott,0,Princeton University
+Scott,0,University of Rochester
+Sethi,0,Princeton University
+Shadbolt,23,Newcastle University
+Shamir,11,Tel Aviv University
+Shannon,17,University of Michigan
+Shaw,0,"University of California, San Diego"
+Shaw,0,Carnegie Mellon University faculty
+Shenker,0,Brown University
+Shneiderman,15,Stony Brook University
+Shortliffe,0,Harvard University
+Siewiorek,0,University of Michigan
+Sifakis,10,National Technical University of Athens
+Simon,4,University of Chicago
+Singh,0,University of Texas at Austin
+Sitaraman,0,Princeton University
+Sleator,0,University of Illinois at Urbana–Champaign
+Sloman,0,University of Sussex
+Smith,0,University of Toronto
+Smith,0,Stanford University
+Spewak,0,Case Western Reserve University
+Spradling,0,University of Nebraska - Lincoln
+Sproull,0,President of the University of Rochester
+Srihari,0,University of Waterloo
+Srihari,3,Bangalore University
+Stachowiak,0,"East High School (Rochester, New York)"
+Stallman,26,Harvard University
+Stamper,0,University of Twente
+Starner,0,Massachusetts Institute of Technology
+Stearns,0,Princeton University
+Stepanov,0,Null
+Stevens,0,University of Michigan
+Stockmeyer,0,"University of California, Santa Cruz"
+Stolfo,0,Columbia University
+Stonebraker,0,Princeton University
+Strachey,0,University of Cambridge
+Strassen,5,University of Göttingen
+Stroustrup,14,Aarhus University
+Sudan,10,"University of California, Berkeley"
+Sussman,2,ArsDigita University
+Sutherland,0,California Institute of Technology
+Sutherland,16,Harvard University
+Sweeney,0,Harvard University
+Szegedy,0,University of Chicago
+Tabriz,0,University of Illinois at Urbana–Champaign
+Tamassia,3,Brown University
+Tanenbaum,22,"University of California, Berkeley"
+Tate,7,Lancaster University
+Thalheim,0,Dresden University of Technology
+Tardos,12,Eötvös Loránd University
+Tardos,5,Eötvös Loránd University
+Tarjan,8,Stanford University
+Tchou,0,University of Pisa
+Teevan,7,Yale University
+Teng,0,Shanghai Jiao Tong University
+Tesler,0,Stanford University
+Tevanian,0,Carnegie Mellon University
+Thacker,7,"University of California, Berkeley"
+Thalmann,4,University of Geneva
+Thompson,2,"University of California, Berkeley"
+Thrun,11,University of Bonn
+Tichy,0,Technische Universität München
+Toda,0,Nihon University
+Toh,15,University of Cambridge
+Torvalds,35,University of Helsinki
+Quevedo,0,Technical University of Madrid
+Toussaint,8,New York University Abu Dhabi
+Townsend,0,Indiana University
+Tozer,0,Null
+Traub,0,Columbia University
+Tucker,0,University of Warwick
+Tukey,0,Brown University
+Turing,0,University of Cambridge
+Turoff,2,University of California - Berkeley
+Ullman,0,Columbia University
+Valiant,13,University of Cambridge
+Vapnik,11,Uzbek State University
+Vardi,8,Bar-Ilan University
+Vaughan,7,Wilberforce University
+Vauquois,0,Grenoble University
+Vazirani,3,"University of California, Berkeley"
+Veloso,9,University of Lisbon
+Vernadat,0,University of Clermont
+Veryard,0,Open University
+Vilkomir,0,Kharkov State University
+Vitanyi,8,Delft University of Technology
+Viterbi,0,University of Southern California
+Vitter,0,University of Mississippi
+Vixie,0,Keio University
+Wada,0,University of Tokyo
+Wagner,0,"University of California, Berkeley"
+Waltz,3,Columbia University
+Wang,0,Stanford University
+Warmuth,0,"University of Colorado, Boulder"
+Warren,0,University of Edinburgh
+Warwick,8,Aston University
+Weglarz,0,Poznań University of Technology
+Wadler,5,University of Edinburgh
+Wegner,3,University of London
+Wegstein,0,University of Illinois
+Weinberger,0,"University of California, Berkeley"
+Weiser,0,University of Michigan
+Weizenbaum,0,Wayne State University
+Westervelt,0,University of Michigan
+Whittaker,5,"University of California, Santa Cruz"
+Widom,0,Cornell University
+Wiederhold,0,"University of California, San Francisco"
+Wiener,9,Cornell University
+Wijngaarden,4,Delft University of Technology
+Wilkes,0,Washington University in St. Louis
+Wilkes,18,University of Cambridge
+Wilks,19,University of Cambridge
+Wilkinson,6,Heriot-Watt University
+Wilson,8,University of Cambridge
+Winograd,0,New York University
+Winograd,2,Stanford University
+Winston,0,Massachusetts Institute of Technology
+Wirth,0,Université Laval
+Wiseman,0,University of Cambridge
+Wisnosky,0,California University of Pennsylvania
+Wolfram,0,University of Illinois at Urbana–Champaign
+Woodger,0,University College London
+Woodward,0,Oxford University
+Worsley,1,University of Toronto
+Wozniak,17,University of Colorado Boulder
+Wu,0,Temple University
+Wulf,0,University of Illinois Urbana-Champaign
+Yannakakis,3,National Technical University of Athens
+Yao,3,National Taiwan University
+Yen,0,"University of California, Berkeley"
+Yoneda,0,University of Tokyo
+Yourdon,0,University of North Texas
+Yung,12,Columbia University
+Zadeh,17,University of Tehran
+Zantema,0,Radboud University
+Zaman,0,Stanford University
+Zdonik,0,Brown University
+Zedan,0,University of Bristol
+Zilberstein,2,"University of California, Berkeley"
+Zimmerman,0,Purdue University
+Zuckerberg,0,Harvard University
+Zuse,5,Technical University of Berlin

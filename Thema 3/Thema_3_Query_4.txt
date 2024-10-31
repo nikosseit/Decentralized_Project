@@ -1,0 +1,83 @@
+#Databricks notebook source
+#Importing everything required for spark sql
+
+import pyspark
+from pyspark.sql.functions import *
+from pyspark.sql.types import IntegerType
+from pyspark.sql.functions import col, avg, format_number,min, when, least
+
+
+#Making the dataframes from the tables that were created from each file
+df_agn = spark.read.option("header",True).csv("/FileStore/tables/tour_occ_ninat-14.csv")
+
+#Print the schema for each dataframe and show the results
+df_agn.printSchema()
+
+#Replace ':' with '0' in the specified columns
+columns = ['Belgium','Bulgaria','Czech Republic','Denmark','Germany (until 1990 former territory of the FRG)',
+           'Estonia','Ireland','Greece','Spain','France','Croatia','Italy','Cyprus','Latvia','Lithuania',
+           'Luxembourg','Hungary','Malta','Netherlands','Austria','Poland','Portugal','Romania','Slovenia',
+           'Slovakia','Finland','Sweden','United Kingdom','Iceland','Liechtenstein','Norway','Switzerland',
+           'Montenegro','Former Yugoslav Republic of Macedonia, the','Serbia','Turkey']
+for column in columns:
+    df_agn= df_agn.withColumn(column, when(df_agn[column] == ":","0") .otherwise(df_agn[column]))
+
+#Remove commas and convert to integers
+for column in columns:
+    df_agn = df_agn.withColumn(column, regexp_replace(col(column), ",", "").cast(IntegerType()))
+#Show the final clean dataframe 
+df_agn.show()
+
+
+# COMMAND ----------
+
+#Define a new column that contains the title of the column with the min value
+#We exclude zero as a value because some of the values are converted from NULL to zero, so this is not representative
+min_column_expr = least(*[when(col(column) != 0, col(column)) for column in columns[1:]])
+
+#Calculate the overall min value of each column(Country) and store it in a dictionary (MinColumnTitle)
+overall_min_values = df_agn.select([min(when(col(column) != 0, col(column))).alias(column) for column in columns[1:]])
+min_column_titles = {}
+
+#Iterate through each column to find each MinColumnTitle
+for column in columns[1:]:
+    min_value = overall_min_values.select(column).first()[0]
+    
+    #Check if min_value is not None before accessing each value
+    if min_value is not None:
+        min_column_title = df_agn.filter((col(column) == min_value) & (col(column) != 0)).select("GEO/TIME").first()
+        
+        #Check if the result is not None before accessing the element
+        #We do it for the case that there are no values for a specific country(eg Switzerland)
+        if min_column_title is not None:
+            min_column_titles[column] = min_column_title[0]
+            
+#Print the dictionary with column names and their corresponding MinColumnTitle
+print("MinColumnTitles:")
+for column, title in min_column_titles.items():
+    print(f"{column}: {title}")
+
+# COMMAND ----------
+
+#Define a new column that contains the title of the column with the min value
+min_values_expr = [min(when(col(column) != 0, col(column))).alias(column) for column in columns[1:]]
+
+#Select the minimum value for each column
+min_values = df_agn.select(min_values_expr)
+
+#Display the DataFrame with the minimum values
+print("MinValues:")
+min_values.show(truncate=False)
+
+
+# COMMAND ----------
+
+from pyspark.sql import Row
+
+#Convert MinColumnTitles dictionary into a dataframe that is created with a single row
+min_titles_row = Row(**min_column_titles)
+min_titles_df = spark.createDataFrame([min_titles_row])
+
+#Display the DataFrame with MinColumnTitles
+print("MinColumnTitles:")
+min_titles_df.show(truncate=False)

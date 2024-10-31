@@ -1,0 +1,84 @@
+# Databricks notebook source
+#Importing everything required for spark sql
+import pyspark
+from pyspark.sql.functions import *
+from pyspark.sql.functions import when
+from pyspark.sql.functions import col
+from pyspark.sql.types import IntegerType
+from pyspark.sql.functions import col, avg, format_number
+from pyspark.sql import functions as F
+
+#Making the dataframes from the tables that were created from each file
+df_agn = spark.read.option("header",True).csv("/FileStore/tables/tour_occ_ninat-14.csv")
+
+#Print the schema for each dataframe and show the results
+df_agn.printSchema()
+
+#Specify the columns and replace ':' with '0' in the specified columns
+#This conversion will be needed after to compare the values so that the minimum and maximum value will be found
+columns = ['Belgium','Bulgaria','Czech Republic','Denmark','Germany (until 1990 former territory of the FRG)',
+           'Estonia','Ireland','Greece','Spain','France','Croatia','Italy','Cyprus','Latvia','Lithuania',
+           'Luxembourg','Hungary','Malta','Netherlands','Austria','Poland','Portugal','Romania','Slovenia',
+           'Slovakia','Finland','Sweden','United Kingdom','Iceland','Liechtenstein','Norway','Switzerland',
+           'Montenegro','Former Yugoslav Republic of Macedonia, the','Serbia','Turkey']
+for column in columns:
+    df_agn= df_agn.withColumn(column, when(df_agn[column] == ":","0") .otherwise(df_agn[column]))
+
+#Remove commas and convert to integers
+for column in columns:
+    df_agn = df_agn.withColumn(column, regexp_replace(col(column), ",", "").cast(IntegerType()))
+#Show the final clean dataframe 
+df_agn.show()
+
+# COMMAND ----------
+
+#List of 5 random countries for comparison with Greece
+column_of_choice = ['Belgium', 'Austria', 'Czech Republic', 'Turkey', 'Germany (until 1990 former territory of the FRG)']
+
+#Select the columns for comparison
+comparison_df = df_agn.select(['GEO/TIME', 'Greece'] + column_of_choice)
+
+#Do the comparison, when the value in the table is Higher, it means that Greece's value is higher than the country's
+#If the value in the table is Lower, it means that Greece's value is lower than the country's
+#By value i mean number of overnight stays
+comparison_df_higher_lower = comparison_df.select( col('GEO/TIME'),*[when(col(country) > col('Greece'), 'Lower').otherwise('Higher').alias(f'{country}') for country in column_of_choice])
+
+#Show the table with the comparison
+comparison_df_higher_lower.show(truncate=False)
+
+#Calculate the number of times Greece had more overnight stays than each of the 5 random countries
+num_times_higher_list = []
+for country in column_of_choice:
+    num_times_higher = comparison_df_higher_lower.agg(sum(when(col(country) == 'Higher', 1).otherwise(0)).alias(f'NumTimesLower_{country}')).first()[f'NumTimesLower_{country}']
+    num_times_higher_list.append(num_times_higher)
+
+#Add a row for the total count
+total_counts = ["Total"] + num_times_higher_list
+
+#Print the table for the total count
+total_counts_df = spark.createDataFrame([total_counts], schema=['FinalTotal'] + [f'TimesHigherThan_{country}' for country in column_of_choice])
+total_counts_df.show(truncate=False)
+
+# COMMAND ----------
+
+#Extract the values from the DataFrame and convert to a list
+total_values = total_counts_df.head(1)[0].asDict().values()
+
+#Convert the values to integers (excluding the first string value)
+int_values = [int(value) if isinstance(value, int) else 0 for value in total_values]
+
+#Initialize the sum
+total_sum = 0
+
+#The final result must be a number (not a table), so the values of the FinalTotal table from above will be added to make a sum as below
+#Iterate over the columns, excluding the first string value
+for i, col_name in enumerate(total_counts_df.columns):
+    if i == 0:
+        continue  # Skip the first string value
+    # Add the value to the sum
+    total_sum += int_values[i]
+    # Print the value
+    print(f"{col_name}: {int_values[i]}")
+
+#Print the total sum of years that the number of overnight stays was higher than the 5 random European countries
+print("Sum of overnight stays:", total_sum)

@@ -1,0 +1,75 @@
+#Databricks notebook source
+#Importing everything required for spark sql
+import pyspark
+from pyspark.sql.functions import *
+from pyspark.sql.functions import when
+from pyspark.sql.functions import col
+from pyspark.sql.types import IntegerType
+from pyspark.sql.functions import col, avg, format_number
+from pyspark.sql import functions as F
+
+#Making the dataframes from the tables that were created from each file
+df_agn = spark.read.option("header",True).csv("/FileStore/tables/tour_occ_ninat-14.csv")
+
+#Print the schema for each dataframe and show the results
+df_agn.printSchema()
+
+#Specify the columns and replace ':' with '0' in the specified columns
+#This conversion will be needed after to compare the values so that the minimum and maximum value will be found
+columns = ['Belgium','Bulgaria','Czech Republic','Denmark','Germany (until 1990 former territory of the FRG)',
+           'Estonia','Ireland','Greece','Spain','France','Croatia','Italy','Cyprus','Latvia','Lithuania',
+           'Luxembourg','Hungary','Malta','Netherlands','Austria','Poland','Portugal','Romania','Slovenia',
+           'Slovakia','Finland','Sweden','United Kingdom','Iceland','Liechtenstein','Norway','Switzerland',
+           'Montenegro','Former Yugoslav Republic of Macedonia, the','Serbia','Turkey']
+for column in columns:
+    df_agn= df_agn.withColumn(column, when(df_agn[column] == ":","0") .otherwise(df_agn[column]))
+
+#Remove commas and convert to integers
+for column in columns:
+    df_agn = df_agn.withColumn(column, regexp_replace(col(column), ",", "").cast(IntegerType()))
+#Show the final clean dataframe 
+df_agn.show()
+
+# COMMAND ----------
+
+#Define a new column that contains the title of the column with the max value of overnight stays
+max_column_expr = greatest(*[col(column) for column in columns[1:]])
+
+# Use a loop to create conditions for each column that checks that the value of the column has the max value
+conditions = [col(column) == max_column_expr for column in columns[1:]]
+
+#Use the when and otherwise functions to assign the title of the max column
+#The final result will be a table with each year(GEO/TIME), each year's max number of overnight stays(MaxValue),
+#and the European country with the max number of overnight stays(MaxColumnTitle)
+df_result = df_agn.withColumn("MaxColumnTitle", col("GEO/TIME"))
+for condition, column in zip(conditions, columns[1:]):
+    df_result = df_result.withColumn("MaxColumnTitle", when(condition, column).otherwise(col("MaxColumnTitle")))
+
+#Select the 'GEO/TIME', 'MaxColumnTitle', and the column with the maximum value
+max_values_df = df_result.select('GEO/TIME', 'MaxColumnTitle', greatest(*[col(country) for country in columns[1:]]).alias('MaxValue'))
+
+#Show the DataFrame with 'GEO/TIME', 'MaxColumnTitle', and the corresponding column with the maximum value
+max_values_df.show(truncate=False)
+
+# COMMAND ----------
+
+#Changing the Countries list so that it is calculated for other countries than Spain, France and Italy, that had the second max number of overnight stays
+new_columns = ['Belgium','Bulgaria','Czech Republic','Denmark','Germany (until 1990 former territory of the FRG)','Estonia','Ireland','Greece','Croatia','Cyprus','Latvia','Lithuania','Luxembourg','Hungary','Malta','Netherlands','Austria','Poland','Portugal','Romania','Slovenia','Slovakia','Finland','Sweden','United Kingdom','Iceland','Liechtenstein','Norway','Switzerland','Montenegro','Former Yugoslav Republic of Macedonia, the','Serbia','Turkey']
+# Define a new column that contains the title of the column with the max value of overnight stays
+max_column_expr = greatest(*[col(column) for column in new_columns[1:]])
+
+#Use a loop to create conditions for each column that checks that the value of the column has the max value
+conditions = [col(column) == max_column_expr for column in new_columns[1:]]
+
+#Use the when and otherwise functions to assign the title of the max column
+#The final result will be a table with each year(GEO/TIME), each year's max number of overnight stays(MaxValue),
+#and the European country with the max number of overnight stays(MaxColumnTitle)
+df_result = df_agn.withColumn("MaxColumnTitle", col("GEO/TIME"))
+for condition, column in zip(conditions, new_columns[1:]):
+    df_result = df_result.withColumn("MaxColumnTitle", when(condition, column).otherwise(col("MaxColumnTitle")))
+
+#Select the 'GEO/TIME', 'MaxColumnTitle', and the column with the maximum value
+max_values_df = df_result.select('GEO/TIME', 'MaxColumnTitle', greatest(*[col(country) for country in new_columns[1:]]).alias('MaxValue'))
+
+#Show the DataFrame with 'GEO/TIME', 'MaxColumnTitle', and the corresponding column with the maximum value
+max_values_df.show(truncate=False)

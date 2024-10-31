@@ -1,0 +1,59 @@
+#Databricks notebook source
+#Importing everything required for spark sql
+import pyspark
+from pyspark.sql.functions import *
+from pyspark.sql.functions import when
+from pyspark.sql.functions import col
+from pyspark.sql.types import IntegerType
+from pyspark.sql.functions import col, avg, format_number
+from pyspark.sql import functions as F
+
+#Making the dataframe from the table that was created from the file 
+df_agn = spark.read.option("header",True).csv("/FileStore/tables/tour_occ_ninat-14.csv")
+
+#Print the schema for the dataframe and show the results
+df_agn.printSchema()
+df_agn.show()
+
+# COMMAND ----------
+
+#Specify the columns and replace ':' with '0' in the specified columns
+#This conversion will be needed after to compare the values so that the minimum and maximum value will be found
+columns = ['Belgium','Bulgaria','Czech Republic','Denmark','Germany (until 1990 former territory of the FRG)',
+           'Estonia','Ireland','Greece','Spain','France','Croatia','Italy','Cyprus','Latvia','Lithuania',
+           'Luxembourg','Hungary','Malta','Netherlands','Austria','Poland','Portugal','Romania','Slovenia',
+           'Slovakia','Finland','Sweden','United Kingdom','Iceland','Liechtenstein','Norway','Switzerland',
+           'Montenegro','Former Yugoslav Republic of Macedonia, the','Serbia','Turkey']
+for column in columns:
+    df_agn= df_agn.withColumn(column, when(df_agn[column] == ":","0") .otherwise(df_agn[column]))
+
+# Show the modified DataFrame
+df_agn.show()
+
+# COMMAND ----------
+
+# Remove commas and convert to integers so that the comparison can take place after
+for column in columns:
+    df_agn = df_agn.withColumn(column, regexp_replace(col(column), ",", "").cast(IntegerType()))
+    
+# Show the final clean dataFrame with integer columns
+df_agn.show()
+
+# COMMAND ----------
+
+# Remove the 2004 and 2015 so that after that the average of 2005-2014 is calculated
+df_clean = df_agn.filter((F.col("GEO/TIME") != "2006") & (F.col("GEO/TIME") != "2015"))
+df_clean.show()
+
+# COMMAND ----------
+
+#Calculate the average for the all the countries
+avrg = df_clean.agg({col_name: 'avg' for col_name in columns})
+
+#Set the average result at double presicion
+avrg_columns = [format_number(col(country), 2).alias(country) for country in avrg.columns]
+
+#Select the average values and print it
+avrg = avrg.select(avrg_columns)
+avrg.show(truncate=False) #if truncate=True not all of the avg for all the countries will be printed
+
